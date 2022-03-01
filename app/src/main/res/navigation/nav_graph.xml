@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/createAccount">
+
+    <fragment
+        android:id="@+id/createAccount"
+        android:name="com.example.quiz3.aidl.CreateAccount"
+        android:label="CreateAccount" />
+    <fragment
+        android:id="@+id/uploadImage"
+        android:name="com.example.quiz3.aidl.UploadImage"
+        android:label="UploadImage" />
+    <fragment
+        android:id="@+id/usersList"
+        android:name="com.example.quiz3.aidl.UsersListFragment"
+        android:label="UsersList" />
+</navigation>
