@@ -7,5 +7,5 @@
     <item
         android:id="@+id/usersList"
         android:icon="@drawable/ic_launcher_background"
-        android:title="@string/uploadimage" />
+        android:title="@string/userlist" />
 </menu>

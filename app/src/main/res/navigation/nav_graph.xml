@@ -7,13 +7,17 @@
     <fragment
         android:id="@+id/createAccount"
         android:name="com.example.quiz3.aidl.CreateAccount"
-        android:label="CreateAccount" />
+        android:label="CreateAccount" >
+        <action
+            android:id="@+id/action_createAccount_to_uploadImage"
+            app:destination="@id/uploadImage" />
+    </fragment>
     <fragment
         android:id="@+id/uploadImage"
         android:name="com.example.quiz3.aidl.UploadImage"
         android:label="UploadImage" />
     <fragment
         android:id="@+id/usersList"
-        android:name="com.example.quiz3.aidl.UsersListFragment"
+        android:name="com.example.quiz3.aidl.UsersList"
         android:label="UsersList" />
 </navigation>

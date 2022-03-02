@@ -1,5 +1,6 @@
 package com.example.quiz3
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.quiz3.model.UsersList
 
-class RecyclerAdapter(private val homeFeed: UsersList) :
+class RecyclerAdapter(private var homeFeed: UsersList) :
     RecyclerView.Adapter<CustomViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
@@ -21,11 +22,22 @@ class RecyclerAdapter(private val homeFeed: UsersList) :
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        val firstName = homeFeed[position]
-        holder.tvfirstName.text = firstName.firstName
+        val usersInfo = homeFeed[position]
+        holder.tvFirstName.text = usersInfo.firstName
+        holder.tvLastName.text = usersInfo.lastName
+        holder.tvNationalCode.text = usersInfo.nationalCode
     }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun filterList(filteredNames: UsersList) {
+        this.homeFeed = filteredNames
+        notifyDataSetChanged()
+    }
+
 }
 
-class CustomViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-    var tvfirstName: TextView = view.findViewById(R.id.edUser)
+class CustomViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    var tvFirstName: TextView = view.findViewById(R.id.tvFirstName)
+    var tvLastName: TextView = view.findViewById(R.id.tvLastName)
+    var tvNationalCode: TextView = view.findViewById(R.id.tvNationalCode)
 }

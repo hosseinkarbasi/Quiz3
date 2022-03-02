@@ -3,4 +3,6 @@
     <string name="create_account">Create Account</string>
     <string name="createaccount">CreateAccount</string>
     <string name="uploadimage">UploadImage</string>
+    <string name="userlist">UserList</string>
+    <string name="search_by_first_name">Search by First Name and NationalCode</string>
 </resources>

@@ -21,10 +21,9 @@ class MainActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.createAccount,
-                R.id.uploadImage
+                R.id.usersList
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
-
 }

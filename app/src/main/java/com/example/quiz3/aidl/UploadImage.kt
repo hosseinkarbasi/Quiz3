@@ -25,13 +25,12 @@ class UploadImage : Fragment(R.layout.upload_image) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = DataBindingUtil.bind(view)!!
-
-
         binding.selectImageFromGallery()
-
-        val stream: InputStream? =
-            requireContext().contentResolver.openInputStream(imageAddresses)
-        uploadImage(stream!!.readBytes())
+        binding.btnUpload.setOnClickListener {
+            val stream: InputStream? =
+                requireContext().contentResolver.openInputStream(imageAddresses)
+            uploadImage(stream!!.readBytes())
+        }
     }
 
     private fun UploadImageBinding.selectImageFromGallery() {
@@ -44,8 +43,8 @@ class UploadImage : Fragment(R.layout.upload_image) {
         }
     }
 
-    fun uploadImage(src: ByteArray) {
-        var storeId = StoreId(requireContext())
+    private fun uploadImage(src: ByteArray) {
+        val storeId = StoreId(requireContext())
         val part = MultipartBody.Part.createFormData(
             "image",
             "hosseink.png",

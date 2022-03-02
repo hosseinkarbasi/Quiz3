@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.quiz3.R
 import com.example.quiz3.StoreId
 import com.example.quiz3.UserInfo
@@ -21,15 +22,19 @@ class CreateAccount : Fragment(R.layout.create_account) {
         binding = DataBindingUtil.bind(view)!!
 
         binding.btnCreateAccount.setOnClickListener {
+            findNavController().navigate(R.id.action_createAccount_to_uploadImage)
             createAccount()
         }
     }
 
     private fun createAccount() {
-
         val hobbiesList = arrayListOf<String>()
-        hobbiesList.add("Movie")
-        hobbiesList.add("Sport")
+        if (binding.coding.isChecked) {
+            hobbiesList.add(binding.coding.text.toString())
+        }
+        if (binding.movie.isChecked) {
+            hobbiesList.add(binding.movie.text.toString())
+        }
         NetworkManager.service.createAccount(
             UserInfo(
                 binding.edFirstname.text.toString(),
