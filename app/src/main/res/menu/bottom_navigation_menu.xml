@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/createAccount"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/ic_baseline_account_circle_24"
         android:title="@string/createaccount" />
     <item
         android:id="@+id/usersList"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
         android:title="@string/userlist" />
 </menu>

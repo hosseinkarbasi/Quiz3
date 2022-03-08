@@ -1,7 +1,8 @@
 package com.example.quiz3.network
 
-import com.example.quiz3.UserInfo
+import com.example.quiz3.model.UserInfo
 import com.example.quiz3.model.UsersList
+import com.example.quiz3.model.UsersListItem
 import okhttp3.MultipartBody
 import retrofit2.Call
 import retrofit2.http.*
@@ -23,5 +24,8 @@ interface GitHubService {
     ): Call<String>
 
     @GET("users")
-    fun getUsers() :Call<UsersList>
+    fun getUsers(@QueryMap users: HashMap<String, String> = hashMapOf()): Call<UsersList>
+
+    @GET("http://papp.ir/api/v1/users/{id}")
+    fun getShowInfo(@Path("id") id: String): Call<UsersListItem>
 }

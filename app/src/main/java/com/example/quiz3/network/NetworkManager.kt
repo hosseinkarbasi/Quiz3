@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object NetworkManager {
 
-    val client: OkHttpClient by lazy {
+    private val client: OkHttpClient by lazy {
         OkHttpClient.Builder()
             .addInterceptor(getLogging())
             .addInterceptor { chain ->
@@ -32,6 +32,6 @@ object NetworkManager {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    var service = retrofit.create(GitHubService::class.java)
+    var service: GitHubService = retrofit.create(GitHubService::class.java)
 
 }

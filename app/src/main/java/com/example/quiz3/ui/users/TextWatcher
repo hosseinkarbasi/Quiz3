@@ -1,4 +1,4 @@
-package com.example.quiz3.aidl
+package com.example.quiz3.ui.users
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -6,16 +6,14 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
-import android.widget.SearchView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.quiz3.R
-import com.example.quiz3.RecyclerAdapter
+import com.example.quiz3.ui.users.RecyclerAdapter
 import com.example.quiz3.databinding.UsersListBinding
 import com.example.quiz3.model.UsersList
-import com.example.quiz3.model.UsersListItem
 import com.example.quiz3.network.NetworkManager
 import retrofit2.Call
 import retrofit2.Callback
@@ -42,7 +40,6 @@ class UsersList : Fragment(R.layout.users_list) {
             override fun afterTextChanged(p0: Editable?) {
                 getFilter(p0.toString())
             }
-
         })
     }
 
@@ -74,3 +71,12 @@ class UsersList : Fragment(R.layout.users_list) {
         })
     }
 }
+
+
+
+in adapter:
+  @SuppressLint("NotifyDataSetChanged")
+    fun filterList(filteredNames: UsersList) {
+        this.homeFeed = filteredNames
+        notifyDataSetChanged()
+    }

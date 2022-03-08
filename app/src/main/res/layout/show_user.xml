@@ -21,9 +21,11 @@
         <TextView
             android:id="@+id/tvFirstName"
             android:layout_width="match_parent"
-            android:textSize="20sp"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
+            app:autoSizeTextType="uniform"
+            android:fontFamily="@font/roboto_slab_bold"
             android:layout_weight="1"
+            android:layout_margin="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,9 +34,11 @@
         <TextView
             android:id="@+id/tvLastName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:layout_height="30dp"
+            app:autoSizeTextType="uniform"
+            android:fontFamily="@font/roboto_slab_bold"
             android:layout_weight="1"
+            android:layout_margin="8dp"
             app:layout_constraintEnd_toEndOf="@+id/tvFirstName"
             app:layout_constraintStart_toStartOf="@+id/tvFirstName"
             app:layout_constraintTop_toBottomOf="parent" />
@@ -42,9 +46,11 @@
         <TextView
             android:id="@+id/tvNationalCode"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:layout_height="30dp"
+            app:autoSizeTextType="uniform"
+            android:fontFamily="@font/roboto_slab_bold"
             android:layout_weight="1"
+            android:layout_margin="8dp"
             tools:layout_editor_absoluteX="61dp"
             tools:layout_editor_absoluteY="75dp" />
     </LinearLayout>
@@ -52,7 +58,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="#E91E63"
+        android:background="#FF5500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

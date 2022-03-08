@@ -4,10 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Hossein/AndroidStudioProjects/Quiz3/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
-        <entry key="..\:/Users/Hossein/AndroidStudioProjects/Quiz3/app/src/main/res/layout/create_account.xml" value="0.25" />
-        <entry key="..\:/Users/Hossein/AndroidStudioProjects/Quiz3/app/src/main/res/layout/show_user.xml" value="0.44252163164400493" />
+        <entry key="..\:/Users/Hossein/AndroidStudioProjects/Quiz3/app/src/main/res/layout/create_account.xml" value="0.4083333333333333" />
+        <entry key="..\:/Users/Hossein/AndroidStudioProjects/Quiz3/app/src/main/res/layout/show_info.xml" value="0.33" />
+        <entry key="..\:/Users/Hossein/AndroidStudioProjects/Quiz3/app/src/main/res/layout/show_user.xml" value="0.25" />
         <entry key="..\:/Users/Hossein/AndroidStudioProjects/Quiz3/app/src/main/res/layout/upload_image.xml" value="0.15537059056678557" />
-        <entry key="..\:/Users/Hossein/AndroidStudioProjects/Quiz3/app/src/main/res/layout/users_list.xml" value="0.25" />
+        <entry key="..\:/Users/Hossein/AndroidStudioProjects/Quiz3/app/src/main/res/layout/users_list.xml" value="0.33" />
         <entry key="..\:/Users/Hossein/AndroidStudioProjects/Quiz3/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20416666666666666" />
       </map>
     </option>

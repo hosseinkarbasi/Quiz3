@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/createAccount"
-        android:name="com.example.quiz3.aidl.CreateAccount"
+        android:name="com.example.quiz3.ui.createaccount.CreateAccount"
         android:label="CreateAccount" >
         <action
             android:id="@+id/action_createAccount_to_uploadImage"
@@ -14,10 +14,22 @@
     </fragment>
     <fragment
         android:id="@+id/uploadImage"
-        android:name="com.example.quiz3.aidl.UploadImage"
+        android:name="com.example.quiz3.ui.uploadimage.UploadImage"
         android:label="UploadImage" />
     <fragment
         android:id="@+id/usersList"
-        android:name="com.example.quiz3.aidl.UsersList"
-        android:label="UsersList" />
+        android:name="com.example.quiz3.ui.users.UsersList"
+        android:label="UsersList" >
+        <action
+            android:id="@+id/action_usersList_to_showInfo"
+            app:destination="@id/showInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/showInfo"
+        android:name="com.example.quiz3.ui.showusersinfo.ShowInfo"
+        android:label="ShowInfo" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
 </navigation>

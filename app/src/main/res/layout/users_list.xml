@@ -15,26 +15,37 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="16dp">
 
-            <EditText
-                android:id="@+id/tv"
-                android:layout_width="392dp"
-                android:layout_height="64dp"
-                android:layout_marginTop="28dp"
-                android:hint="@string/search_by_first_name"
-                app:layout_constraintBottom_toTopOf="@+id/recyclerView_main"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.473"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/searchTv"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="214dp"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:hint="@string/search_by_first_name" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/black"
+                    android:fontFamily="@font/roboto_slab_bold"
+                    android:text="Search" />
+            </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="parent" />
+                android:layout_margin="16dp"
+                android:layout_marginTop="16dp" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

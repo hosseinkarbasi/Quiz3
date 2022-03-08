@@ -1,7 +1,8 @@
-package com.example.quiz3
+package com.example.quiz3.ui
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.quiz3.R
 
 class StoreId(context: Context) {
     private var prefs: SharedPreferences =
