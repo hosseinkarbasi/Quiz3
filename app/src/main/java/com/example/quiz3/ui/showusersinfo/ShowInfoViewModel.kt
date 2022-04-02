@@ -4,9 +4,8 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.quiz3.model.UserInfo
-import com.example.quiz3.model.UsersListItem
-import com.example.quiz3.network.NetworkManager
+import com.example.quiz3.data.remote.model.UsersListItem
+import com.example.quiz3.data.remote.network.NetworkManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

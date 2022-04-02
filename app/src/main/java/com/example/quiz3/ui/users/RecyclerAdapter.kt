@@ -4,17 +4,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.quiz3.data.model.User
 import com.example.quiz3.databinding.ShowUserBinding
-import com.example.quiz3.model.UsersList
+import com.example.quiz3.data.remote.model.UsersListItem
 
-class RecyclerAdapter(private var homeFeed: UsersList) :
+class RecyclerAdapter(private var homeFeed: List<User>) :
     RecyclerView.Adapter<RecyclerAdapter.CustomViewHolder>() {
 
     lateinit var binding: ShowUserBinding
     lateinit var itemClick: ItemClick
 
     inner class CustomViewHolder(private var binding: ShowUserBinding) :
-        RecyclerView.ViewHolder(binding.root),View.OnClickListener {
+        RecyclerView.ViewHolder(binding.root), View.OnClickListener {
         fun bind(position: Int) {
             binding.tvFirstName.text = homeFeed[position].firstName
             binding.tvLastName.text = homeFeed[position].lastName

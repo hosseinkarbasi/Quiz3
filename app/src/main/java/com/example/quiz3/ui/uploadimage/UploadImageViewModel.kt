@@ -4,8 +4,7 @@ import android.content.Context
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.quiz3.ui.StoreId
-import com.example.quiz3.network.NetworkManager
-import okhttp3.MediaType
+import com.example.quiz3.data.remote.network.NetworkManager
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody

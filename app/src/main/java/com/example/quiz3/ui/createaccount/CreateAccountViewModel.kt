@@ -4,13 +4,11 @@ import android.content.Context
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.quiz3.ui.StoreId
-import com.example.quiz3.model.UserInfo
-import com.example.quiz3.network.NetworkManager
+import com.example.quiz3.data.remote.model.UserInfo
+import com.example.quiz3.data.remote.network.NetworkManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
-
 
 class CreateAccountViewModel : ViewModel() {
 

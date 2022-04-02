@@ -1,4 +1,4 @@
-package com.example.quiz3.network
+package com.example.quiz3.data.remote.network
 
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -13,7 +13,9 @@ object NetworkManager {
             .addInterceptor(getLogging())
             .addInterceptor { chain ->
                 val request =
-                    chain.request().newBuilder().addHeader("Authorization", "Bearer karbasiiiiiii")
+                    chain.request()
+                        .newBuilder()
+                        .addHeader("Authorization", "Bearer karbasi021iii")
                         .build()
                 chain.proceed(request)
             }
@@ -32,6 +34,6 @@ object NetworkManager {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    var service: GitHubService = retrofit.create(GitHubService::class.java)
+    var service: UserApi = retrofit.create(UserApi::class.java)
 
 }

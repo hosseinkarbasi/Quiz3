@@ -3,8 +3,7 @@ package com.example.quiz3.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.quiz3.R
 import com.example.quiz3.databinding.ActivityMainBinding
@@ -17,14 +16,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val navController = findNavController(R.id.nav_fragment)
-        binding.bottomNavigationView.setupWithNavController(navController)
-
-//        val appBarConfiguration = AppBarConfiguration(
-//            setOf(
-//                R.id.createAccount,
-//                R.id.usersList
-//            )
-//        )
-//        setupActionBarWithNavController(navController, appBarConfiguration)
+        binding.bottomNavigationView.apply {
+            setupWithNavController(navController)
+            setOnItemSelectedListener { item ->
+                NavigationUI.onNavDestinationSelected(
+                    item,
+                    navController
+                )
+                true
+            }
+        }
     }
 }

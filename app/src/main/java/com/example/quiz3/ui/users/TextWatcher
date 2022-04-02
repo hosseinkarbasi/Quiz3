@@ -13,8 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.quiz3.R
 import com.example.quiz3.ui.users.RecyclerAdapter
 import com.example.quiz3.databinding.UsersListBinding
-import com.example.quiz3.model.UsersList
-import com.example.quiz3.network.NetworkManager
+import com.example.quiz3.data.remote.model.UsersList
+import com.example.quiz3.data.remote.network.NetworkManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

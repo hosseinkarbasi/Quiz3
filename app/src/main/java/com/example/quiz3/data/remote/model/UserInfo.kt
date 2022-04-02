@@ -1,4 +1,4 @@
-package com.example.quiz3.model
+package com.example.quiz3.data.remote.model
 
 import com.google.gson.annotations.SerializedName
 

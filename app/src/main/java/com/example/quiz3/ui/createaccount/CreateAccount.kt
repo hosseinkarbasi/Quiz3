@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.quiz3.R
-import com.example.quiz3.model.UserInfo
+import com.example.quiz3.data.remote.model.UserInfo
 import com.example.quiz3.databinding.CreateAccountBinding
 
 class CreateAccount : Fragment(R.layout.create_account) {
